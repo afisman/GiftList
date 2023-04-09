@@ -21,7 +21,7 @@ app.post('/gift', (req, res) => {
   // TODO: prove that a name is in the list 
   const proof = merkleTree.getProof(index)
   if (verifyProof(proof, name, MERKLE_ROOT)) {
-    res.send(`Congratulations ${name}, you got a toy robot!`);
+    res.send(`Congratulations ${name}!. You got a toy robot!`);
   }
   else {
     res.send("You are not on the list :(");
